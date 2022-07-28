@@ -1,7 +1,9 @@
 import "./styles.css";
+import { streakCounter } from "@cynthiateeters/streak-counter";
 
 export default function App() {
-  const currentCount = 5;
+  const today = new Date();
+  const { currentCount } = streakCounter(localStorage, today);
 
   return (
     <div className="App">
